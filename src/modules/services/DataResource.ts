@@ -6,20 +6,27 @@ export class DataResource<T> {
 
 		return res.json();
 	}
-	async load(id: number) {
+	async load(id: number): Promise<T> {
 		const res = await fetch(`${this.endpoint}/${id}`);
 
 		return res.json();
 	}
-	async delete(id: number) {
-		await fetch(`${this.endpoint}/${id}`, {
+	async delete(id: number): Promise<Response> {
+		const res = await fetch(`${this.endpoint}/${id}`, {
 			method: 'DELETE'
 		});
+
+		return res;
 	}
-	async save(data: T) {
-		await fetch(this.endpoint, {
+	async save(data: T): Promise<Response> {
+		const res = await fetch(this.endpoint, {
 			method: 'POST',
-			body: JSON.stringify(data)
+			body: JSON.stringify(data),
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		});
+
+		return res;
 	}
 }
