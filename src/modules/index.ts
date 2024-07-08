@@ -2,7 +2,6 @@ import { Pizza, PizzaPros } from "./models/Pizza";
 
 const rootElement = document.querySelector('.root')!;
 
-console.log(rootElement);
 
 const createPizzaTemplate = (pizza: PizzaPros): string => {
 	return `
