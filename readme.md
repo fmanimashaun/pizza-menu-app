@@ -1,1 +1,1 @@
-# web app built with typescript and vite
+# web app built with typescript and vite and server-json
