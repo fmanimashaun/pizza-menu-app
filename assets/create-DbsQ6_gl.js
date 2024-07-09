@@ -1,0 +1,1 @@
+import{P as a}from"./Pizza-VnJp2V88.js";const o=document.querySelector(".create");o.addEventListener("submit",async i=>{i.preventDefault();const e=new FormData(o),n={title:e.get("title"),description:e.get("description"),price:Number(e.get("price")),toppings:e.getAll("toppings")},t=await a.save(n);t.ok?t.ok&&(window.location.href="/"):console.log("new pizza can't be saved")});
