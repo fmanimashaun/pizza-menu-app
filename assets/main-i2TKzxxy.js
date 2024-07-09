@@ -1,4 +1,4 @@
-import{P as a}from"./Pizza-VnJp2V88.js";const p=document.querySelector(".root"),s=t=>`
+import{P as a}from"./Pizza-BgMluv5C.js";const p=document.querySelector(".root"),s=t=>`
         <div class="pizza">
             <h2>${t.title}</h2>
             <p class="toppings">${t.toppings.join(",")}</p>
