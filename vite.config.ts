@@ -2,8 +2,10 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  root: 'src', // Set the root directory to 'src'
+  root: 'src',
+  base: '/pizza-menu-app/',
   build: {
+    outDir: '../dist',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
